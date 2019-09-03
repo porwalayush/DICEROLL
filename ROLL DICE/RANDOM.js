@@ -1,10 +1,21 @@
-var res;
-function main( resultfun)
+
+var c=0;
+function main(resultfun)
 {
 var dice1 = Math.floor(Math.random() * 6) + 1;
 document.getElementById('dice1').style.display = 'block';
 document.getElementById('dice1').src = 'dice-' + dice1 + '.png';
-return dice1;
+c=c+dice1;
+document.getElementById('current').textContent ="SCORE"+" "+c;
 }
-res=res+main();
-document.getElementById('current').textContent = res;
+rev=main();
+var timeleft = 20;
+var downloadTimer = setInterval(function(){
+  document.getElementById("countdown").innerHTML = timeleft + " seconds";
+  timeleft -= 1;
+  if(timeleft <= 0){
+    clearInterval(downloadTimer);
+    document.getElementById("countdown").innerHTML = "GAME OVER"
+    document.getElementById("btnPlaceOrder").disabled = true; 
+  }
+}, 1000);
