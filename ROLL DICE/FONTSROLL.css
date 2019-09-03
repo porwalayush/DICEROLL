@@ -70,3 +70,7 @@ button{
     left: 20%;
     font-size:200%; 
 }
+.startpos{
+    position: absolute;
+    top: 65%;
+}

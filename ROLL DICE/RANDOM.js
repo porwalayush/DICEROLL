@@ -8,7 +8,7 @@ document.getElementById('dice1').src = 'dice-' + dice1 + '.png';
 c=c+dice1;
 document.getElementById('current').textContent ="SCORE"+" "+c;
 }
-rev=main();
+function start(){
 var timeleft = 20;
 var downloadTimer = setInterval(function(){
   document.getElementById("countdown").innerHTML = timeleft + " seconds";
@@ -19,3 +19,4 @@ var downloadTimer = setInterval(function(){
     document.getElementById("btnPlaceOrder").disabled = true; 
   }
 }, 1000);
+}
