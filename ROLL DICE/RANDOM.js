@@ -9,6 +9,7 @@ c=c+dice1;
 document.getElementById('current').textContent ="SCORE"+" "+c;
 }
 function start(){
+	c=0;
 var timeleft = 20;
 var downloadTimer = setInterval(function(){
   document.getElementById("countdown").innerHTML = timeleft + " seconds";
